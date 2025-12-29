@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <div className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[50px]">
+    <div className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px]">
       <div className="flex items-center justify-between gap-10">
         <div className="flex max-w-[650px] flex-col gap-6">
           <div className="flex flex-col gap-5">
