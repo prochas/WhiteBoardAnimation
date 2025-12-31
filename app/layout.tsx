@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Header from "@/components/Header";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={geist.className}>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
