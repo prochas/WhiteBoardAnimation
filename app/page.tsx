@@ -1,6 +1,9 @@
 import React from "react";
 import HeroSection from "@/components/HeroSection";
 import VideosSection from "@/components/VideosSection";
+import BenefitsSections from "@/components/BenefitsSections";
+import FeatureSection from "@/components/FeatureSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +14,15 @@ export default function Home() {
       <section className="pt-[100px] bg-white">
         <VideosSection />
       </section>
+      <section className="bg-white">
+        <BenefitsSections />
+      </section>
+      <section className="pb-[100px] bg-white">
+        <FeatureSection />
+      </section>
+      <footer>
+        <Footer />
+      </footer>
     </React.Fragment>
   );
 }

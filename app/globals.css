@@ -28,3 +28,17 @@ body {
   font-weight: 400;
   line-height: 170%;
 }
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 80s linear infinite;
+}
