@@ -41,7 +41,7 @@ export default function HeroSection() {
                 preload="metadata"
               >
                 <source
-                  src="https://tchke5jlslnwcioi.public.blob.vercel-storage.com/initial-video.mp4"
+                  src="https://tchke5jlslnwcioi.public.blob.vercel-storage.com/hero-video.mp4"
                   type="video/mp4"
                 />
               </video>
