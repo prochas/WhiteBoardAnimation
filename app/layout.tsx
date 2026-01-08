@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 import "./globals.css";
 
@@ -26,8 +30,10 @@ export default function RootLayout({
       <body className={geist.className}>
         <Header />
         <main>{children}</main>
+        <Footer />
         <Analytics />
         <SpeedInsights />
+        <ToastContainer position="bottom-right" autoClose={3000} />
       </body>
     </html>
   );

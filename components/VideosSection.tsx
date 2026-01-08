@@ -6,6 +6,8 @@ import IconSecond from "../public/images/videoIconTwo.svg";
 import IconThird from "../public/images/videoIconThree.svg";
 import Image from "next/image";
 import { YouTubePlayerWithOverlay } from "./YouTubePlayerWithOverlay";
+import { WebflowStagger } from "@/utils/Stagger";
+import { WebflowReveal } from "@/utils/Reveal";
 
 interface VideoItem {
   title: string;
@@ -18,25 +20,25 @@ export default function VideosSection() {
   const videos: VideoItem[] = useMemo(
     () => [
       {
-        title: "Naglis Kardelis apie „Valstybę“ ir teisingumo sampratą",
+        title: "IDĖJOS: Sokratas ir „Žinau, kad nežinau“",
         icon: IconFirst,
         description:
-          "„Platonas mano, jog tarp etikos ir politikos yra tiesioginė priklausomybė: tam, kad sukurtum teisingą valstybę, reikia sukurti moralų asmenį“, – teigia profesorius Naglis Kardelis.",
-        youtubeUrl: "https://www.youtube.com/watch?v=evkuRmROz98",
+          "Sokratas (469 – 399 m. pr. Kr.) – senovės graikų mąstytojas, vienas ryškiausių Pasaulio filosofų. Sokratas nieko neparašė, nes manė, kad pašnekesys yra tinkamiausias mąstymo būdas.",
+        youtubeUrl: "https://www.youtube.com/watch?v=tzR7D5VIYmM",
       },
       {
-        title: "Naglis Kardelis apie „Gorgiją“ ir įtikinėjimo galią",
+        title: "IDĖJOS: Blaise Pascalis ir „Pascalio lažybos“",
         icon: IconSecond,
         description:
-          "„Gorgijas“ šiuolaikinės politikos kontekste labai svarbus, nes nemaža dalis politikų mano, kad žmonės tai yra kaip tam tikra banda, kuri labai lengvai ganoma“, – teigia profesorius Naglis Kardelis.",
-        youtubeUrl: "https://www.youtube.com/watch?v=psJSXFWSm7U",
+          "Blaise Pascalis (1623-1662 m.) – prancūzų matematikas ir jautrus religinis mąstytojas, kuris paliko ryškią žymę moksliniame ir religiniame Vakarų istorijos pasaulyje.",
+        youtubeUrl: "https://www.youtube.com/watch?v=KBpxWEErW90",
       },
       {
-        title: "IDĖJOS: Leonidas Donskis ir „Nežinomybės žmoguje magija“",
+        title: "IDĖJOS: Imanuelis Kantas ir ,,Privalau, vadinasi, galiu!““",
         icon: IconThird,
         description:
-          "„Žmogus kultūroje yra nepažįstamasis. Ir baisus pavojus slypi ambicijoje iki galo pažinti žmogų“, – teigė Leonidas Donskis. ",
-        youtubeUrl: "https://www.youtube.com/watch?v=aEmxpku8lTY",
+          "Imanuelis Kantas (1724-1804 m.) – vokiečių mąstytojas, turintis ir lietuviškų šaknų. Kanto mąstymo palikimas Vakarų filosofijos tradicijoje – akivaizdus.",
+        youtubeUrl: "https://www.youtube.com/watch?v=96u-yKfsmOQ",
       },
     ],
     []
@@ -45,12 +47,12 @@ export default function VideosSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px]">
-      <h2 className="text-4xl font-semibold leading-[1.2] text-[#000f29] mb-10 text-center">
+    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px]">
+      <h2 className="text-4xl font-semibold leading-[1.2] text-[#000f29] mb-15 text-center">
         Our Latest Videos
       </h2>
       <div className="flex overflow-hidden flex-start">
-        <div className="flex max-w-[500px] w-full flex-col gap-6">
+        <WebflowReveal className="flex max-w-[500px] w-full flex-col gap-6">
           {videos.map((video, index) => (
             <div
               key={index}
@@ -75,8 +77,8 @@ export default function VideosSection() {
               <p className="text-base text-[#52525a]">{video.description}</p>
             </div>
           ))}
-        </div>
-        <div className="w-full max-w-[871px] ml-[65px] flex items-center justify-center p-6">
+        </WebflowReveal>
+        <WebflowReveal className="w-full max-w-[871px] ml-[65px] flex items-center justify-center p-6">
           <div className="relative w-full">
             <YouTubePlayerWithOverlay
               youtubeUrl={videos[activeIndex].youtubeUrl}
@@ -96,8 +98,8 @@ export default function VideosSection() {
               </a>
             </div>
           </div>
-        </div>
+        </WebflowReveal>
       </div>
-    </div>
+    </WebflowStagger>
   );
 }

@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 
+import { WebflowStagger } from "@/utils/Stagger";
+import { WebflowReveal } from "@/utils/Reveal";
+
 import FeatureOne from "../public/images/one-min.jpg";
 import FeatureTwo from "../public/images/two-min.jpg";
 import FeatureThree from "../public/images/three-min.jpg";
@@ -17,7 +20,7 @@ import FeatureBackground from "../public/images/feature-background.svg";
 
 export default function FeatureSection() {
   return (
-    <div className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px] mt-[50px]">
+    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px] mt-[50px]">
       <div
         className="flex flex-col gap-16 bg-[#0a0915] rounded-[24px] pt-[70px] pb-[100px] relativez-[1]"
         style={{
@@ -27,7 +30,7 @@ export default function FeatureSection() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col items-center gap-10 text-center px-5">
+        <WebflowReveal className="flex flex-col items-center gap-10 text-center px-5">
           <div className="flex flex-col items-center justify-center gap-4">
             <p className="opacity-70 text-white tracking-[2px] uppercase text-[12px] font-normal">
               Features
@@ -50,8 +53,8 @@ export default function FeatureSection() {
           >
             Explore Our Features
           </a>
-        </div>
-        <div className="relative overflow-hidden mt-10">
+        </WebflowReveal>
+        <WebflowReveal className="relative overflow-hidden mt-10">
           {/* Fade edges (optional but recommended) */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0a0915] to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0a0915] to-transparent z-10" />
@@ -109,8 +112,8 @@ export default function FeatureSection() {
               ))}
             </div>
           </div>
-        </div>
+        </WebflowReveal>
       </div>
-    </div>
+    </WebflowStagger>
   );
 }
