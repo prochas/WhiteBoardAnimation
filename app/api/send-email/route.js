@@ -16,8 +16,8 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: `"Contact Form" <${process.env.SMALSIAI_EMAIL_USER}>`,
-      to: email,
+      from: `"Kontaktų forma" <${process.env.SMALSIAI_EMAIL_USER}>`,
+      to: process.env.SMALSIAI_EMAIL_USER,
       subject: "Nauja žinutė iš Smalsiai.lt",
       html: `
         <h2>Nauja žinutė iš Smalsiai 📧</h2>
