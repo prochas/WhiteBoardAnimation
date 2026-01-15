@@ -6,16 +6,18 @@ export async function POST(req) {
     const { fullName, email, phone, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.SMALSIAI_EMAIL_USER, 
+        pass: process.env.SMALSIAI_EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"Contact Form" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
+      from: `"Contact Form" <${process.env.SMALSIAI_EMAIL_USER}>`,
+      to: email,
       subject: "Nauja žinutė iš Smalsiai.lt",
       html: `
         <h2>Nauja žinutė iš Smalsiai 📧</h2>

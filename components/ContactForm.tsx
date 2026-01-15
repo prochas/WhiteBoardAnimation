@@ -63,15 +63,9 @@ export default function ContactForm() {
         <input
           type="email"
           name="email"
-          onInput={(e) => {
-            e.currentTarget.value = e.currentTarget.value.replace(
-              /[^a-zA-Z0-9._%+-@]/g,
-              ""
-            );
-          }}
+
           required
           placeholder="Email"
-          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           className="rounded-lg p-3 border bg-white border-gray-300 focus:outline-none"
         />
       </div>
@@ -83,13 +77,6 @@ export default function ContactForm() {
         <input
           name="phone"
           placeholder="Phone"
-          pattern="[+]?[\d\s()-]{7,20}"
-          onInput={(e) => {
-            e.currentTarget.value = e.currentTarget.value.replace(
-              /[^0-9+()\s-]/g,
-              ""
-            );
-          }}
           required
           className="rounded-lg p-3 border bg-white border-gray-300 focus:outline-none"
         />
