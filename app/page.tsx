@@ -9,7 +9,7 @@ import Brands from "@/components/Brands";
 export default function Home() {
   return (
     <React.Fragment>
-      <section className="pt-[180px] bg-[#f7f6f4]">
+      <section className="bg-[#f7f6f4]">
         <HeroSection />
       </section>
       <section className="bg-white pt-[100px]">

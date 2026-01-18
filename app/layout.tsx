@@ -29,7 +29,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={geist.className}>
         <Header />
-        <main>{children}</main>
+        <div className="min-h-screen flex flex-col pt-[92px]">
+          <main>{children}</main>
+        </div>
         <Footer />
         <Analytics />
         <SpeedInsights />

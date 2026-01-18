@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="Diamond">
+  <defs>
+    <linearGradient id="a" x1="256" x2="256" y1="460" y2="32" gradientTransform="matrix(1 0 0 -1 0 514)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ef4700" class="stopColor00efd1 svgShape"></stop>
+      <stop offset="1" stop-color="#ff7d46" class="stopColor00acea svgShape"></stop>
+    </linearGradient>
+  </defs>
+  <path fill="url(#a)" d="M391.324,66.074a10,10,0,0,0-8.532-4.784H129.208a10,10,0,0,0-8.532,4.784L58.16,168.338a10,10,0,0,0,.387,11.018l188.481,264.61.067.193.057-.02,1.253,1.759a10,10,0,0,0,8.145,4.2h.014a10,10,0,0,0,8.147-4.221l1.246-1.76.057.019.065-.192,187.39-264.611a10,10,0,0,0,.371-10.995ZM278.479,81.29h90.333L344,153.932Zm47.192,82.182H187.17l68.871-77.2Zm-157.2-9.079-25.173-73.1h90.391Zm-18.027,9.079H84.576l42.132-68.92Zm183.471,20-77.4,226.605-78.032-226.6Zm51.461-88.789,42.052,68.789H361.877ZM86.034,183.472h71.294l66.721,193.76Zm269.011,0H426.03L288.911,377.1Z"></path>
+</svg>

@@ -42,3 +42,26 @@ body {
 .animate-scroll-right {
   animation: scroll-right 80s linear infinite;
 }
+
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/*Modal fix*/
+.ReactModal__Content:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

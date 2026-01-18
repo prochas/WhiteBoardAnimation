@@ -10,9 +10,9 @@ import { WebflowReveal } from "@/utils/Reveal";
 export default function GetInTouch() {
   return (
     <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px]">
-      <h2 className="text-4xl font-semibold leading-[1.2] text-[#000f29] mb-15 text-center">
+      <WebflowReveal className="text-4xl font-semibold leading-[1.2] text-[#000f29] mb-15 text-center">
         Get in Touch
-      </h2>
+      </WebflowReveal>
       <div className="flex items-center justify-between gap-10 items-stretch">
         <WebflowReveal className="flex flex-col w-full bg-[#f7f6f4] p-10 rounded-xl max-w-[550px]">
           <div className="flex flex-col gap-8">
