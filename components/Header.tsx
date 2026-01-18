@@ -61,12 +61,12 @@ export default function Header() {
                     </Link>
                   </li>
                   <li className="opacity-85 text-[#0a0915] text-base">
-                    <a
+                    <Link
                       href="/kontaktai"
                       className="text-base hover:text-[#ff7d46] transition duration-300"
                     >
                       Kontaktai
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
