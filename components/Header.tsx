@@ -62,14 +62,6 @@ export default function Header() {
                   </li>
                   <li className="opacity-85 text-[#0a0915] text-base">
                     <a
-                      href="#"
-                      className="text-base hover:text-[#ff7d46] transition duration-300"
-                    >
-                      Paslaugos
-                    </a>
-                  </li>
-                  <li className="opacity-85 text-[#0a0915] text-base">
-                    <a
                       href="/kontaktai"
                       className="text-base hover:text-[#ff7d46] transition duration-300"
                     >
