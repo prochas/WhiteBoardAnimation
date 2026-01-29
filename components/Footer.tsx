@@ -19,54 +19,45 @@ export default function Footer() {
               width={124}
               height={35}
             />
-            <div className="flex items-center gap-5">
-              <div className="flex items-center gap-8">
-                <a
-                  href="https://facebook.com"
-                  aria-label="Facebook"
-                  className="text-black hover:text-[#ff7d46] transition-colors duration-300"
-                >
-                  <Image
-                    src={FacebookIcon}
-                    alt="Facebook"
-                    className="w-10 h-10"
-                  />
-                </a>
-                <a
-                  href="https://youtube.com"
-                  aria-label="YouTube"
-                  className="text-black hover:text-[#ff7d46] transition-colors duration-300"
-                >
-                  <Image src={YoutubeIcon} alt="YouTube" className="w-8 h-8" />
-                </a>
+            <div className="flex items-center justify-start gap-8 w-[170px]">
+              <a
+                href="https://facebook.com"
+                aria-label="Facebook"
+                className="text-black hover:text-[#ff7d46] transition-colors duration-300"
+              >
+                <Image
+                  src={FacebookIcon}
+                  alt="Facebook"
+                  className="w-10 h-10"
+                />
+              </a>
+              <a
+                href="https://youtube.com"
+                aria-label="YouTube"
+                className="text-black hover:text-[#ff7d46] transition-colors duration-300"
+              >
+                <Image src={YoutubeIcon} alt="YouTube" className="w-8 h-8" />
+              </a>
 
-                <a
-                  href="https://instagram.com"
-                  aria-label="Instagram"
-                  className="text-black hover:text-[#ff7d46] transition-colors duration-300"
-                >
-                  <Image
-                    src={InstagramIcon}
-                    alt="Instagram"
-                    className="w-8 h-8"
-                  />
-                </a>
-              </div>
+              <a
+                href="https://instagram.com"
+                aria-label="Instagram"
+                className="text-black hover:text-[#ff7d46] transition-colors duration-300"
+              >
+                <Image
+                  src={InstagramIcon}
+                  alt="Instagram"
+                  className="w-8 h-8"
+                />
+              </a>
             </div>
           </div>
-          <div className="flex items-center gap-4 text-sm justify-end">
+          <div className="flex lg:items-center items-start gap-4 text-sm lg:justify-end justify-start flex-wrap">
             <a
               href="#"
               className="text-[#11122c] hover:text-[#ff7d46] transition duration-300"
             >
               Privacy Policy
-            </a>
-            <span className="text-[#11122c]">|</span>
-            <a
-              href="#"
-              className="text-[#11122c] hover:text-[#ff7d46] transition duration-300"
-            >
-              Services
             </a>
             <span className="text-[#11122c]">|</span>
             <a
@@ -83,7 +74,6 @@ export default function Footer() {
               About Us
             </a>
           </div>
-
           <div className="flex justify-start">
             <span className="text-sm">
               © {new Date().getFullYear()} Smalsiai. All rights reserved.

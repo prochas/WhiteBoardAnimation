@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import AddressIcon from "@/public/images/address.svg";
 import EmailIcon from "@/public/images/email.svg";
@@ -8,13 +9,16 @@ import { WebflowStagger } from "@/utils/Stagger";
 import { WebflowReveal } from "@/utils/Reveal";
 
 export default function GetInTouch() {
+  const pathname = usePathname();
+  const isContactsPage = pathname === "/kontaktai";
+
   return (
-    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px]">
-      <WebflowReveal className="text-4xl font-semibold leading-[1.2] text-[#000f29] mb-15 text-center">
+    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] lg:pb-[100px] pb-[70px]">
+      <WebflowReveal className="lg:text-4xl text-3xl font-semibold leading-[1.2] text-[#000f29] lg:mb-15 mb-10 text-center">
         Get in Touch
       </WebflowReveal>
-      <div className="flex items-center justify-between gap-10 items-stretch">
-        <WebflowReveal className="flex flex-col w-full bg-[#f7f6f4] p-10 rounded-xl max-w-[550px]">
+      <div className="flex items-center justify-between gap-10 items-stretch flex-wrap lg:flex-nowrap">
+        <WebflowReveal className="flex flex-col w-full bg-[#f7f6f4] lg:p-10 p-7 rounded-xl max-w-[550px]">
           <div className="flex flex-col gap-8">
             <h3 className="text-2xl font-semibold text-[#000f29]">Contacts</h3>
             <div className="flex flex-col gap-2">
@@ -85,7 +89,7 @@ export default function GetInTouch() {
             </div>
           </div>
         </WebflowReveal>
-        <WebflowReveal className="flex flex-col w-full bg-[#f7f6f4] p-10 rounded-xl">
+        <WebflowReveal className="flex flex-col w-full bg-[#f7f6f4] lg:p-10 p-7 rounded-xl">
           <ContactForm />
         </WebflowReveal>
       </div>

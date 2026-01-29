@@ -10,49 +10,47 @@ import BrandSeven from "@/public/images/brand-seven.svg";
 import { WebflowStagger } from "@/utils/Stagger";
 import { WebflowReveal } from "@/utils/Reveal";
 
+const brands = [
+  BrandOne,
+  BrandTwo,
+  BrandThree,
+  BrandFour,
+  BrandFive,
+  BrandSix,
+  BrandSeven,
+];
+
 export default function Brands() {
   return (
-    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px]">
+    <WebflowStagger className="max-w-[1380px] mx-auto px-[30px]">
       <p className="text-center text-md text-[#52525a] uppercase">
         Loved by over 1 million users from companies like
       </p>
 
-      <WebflowReveal className="flex flex-wrap justify-center gap-10 mt-10 max-w-[900px] mx-auto">
-        <Image
-          src={BrandOne}
-          alt="Brand 1"
-          className="h-16 object-contain opacity-50"
-        />
-        <Image
-          src={BrandTwo}
-          alt="Brand 2"
-          className="h-16 object-contain opacity-50"
-        />
-        <Image
-          src={BrandThree}
-          alt="Brand 3"
-          className="h-16 object-contain opacity-50"
-        />
-        <Image
-          src={BrandFour}
-          alt="Brand 4"
-          className="h-16 object-contain opacity-50"
-        />
-        <Image
-          src={BrandFive}
-          alt="Brand 5"
-          className="h-16 object-contain opacity-50"
-        />
-        <Image
-          src={BrandSix}
-          alt="Brand 6"
-          className="h-16 object-contain opacity-50"
-        />
-        <Image
-          src={BrandSeven}
-          alt="Brand 7"
-          className="h-16 object-contain opacity-50"
-        />
+      {/* Mobile marquee */}
+      <div className="overflow-hidden mt-10 lg:hidden">
+        <div className="flex w-max gap-8 brand-marquee">
+          {[...brands, ...brands].map((brand, index) => (
+            <Image
+              key={index}
+              src={brand}
+              alt={`Brand ${index + 1}`}
+              className="h-16 object-contain opacity-50"
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop layout */}
+      <WebflowReveal className="hidden lg:flex flex-wrap justify-center gap-10 mt-10 max-w-[900px] mx-auto">
+        {brands.map((brand, index) => (
+          <Image
+            key={index}
+            src={brand}
+            alt={`Brand ${index + 1}`}
+            className="h-16 object-contain opacity-50"
+          />
+        ))}
       </WebflowReveal>
     </WebflowStagger>
   );

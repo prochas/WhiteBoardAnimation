@@ -12,16 +12,16 @@ export default function Home() {
       <section className="bg-[#f7f6f4]">
         <HeroSection />
       </section>
-      <section className="bg-white pt-[100px]">
+      <section className="bg-white lg:pt-[100px] pt-[70px]">
         <Brands />
       </section>
-      <section className="pt-[100px] bg-white">
+      <section className="lg:pt-[100px] pt-[70px] bg-white">
         <VideosSection />
       </section>
       <section className="bg-white">
         <BenefitsSections />
       </section>
-      <section className=" bg-white">
+      <section className="bg-white">
         <FeatureSection />
       </section>
       <section className="bg-white">

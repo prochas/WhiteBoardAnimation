@@ -41,17 +41,17 @@ export default function VideosSection() {
         youtubeUrl: "https://www.youtube.com/watch?v=96u-yKfsmOQ",
       },
     ],
-    []
+    [],
   );
 
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px]">
-      <h2 className="text-4xl font-semibold leading-[1.2] text-[#000f29] mb-15 text-center">
+    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] lg:pb-[100px] pb-[50px]">
+      <h2 className="lg:text-4xl text-3xl font-semibold leading-[1.2] text-[#000f29] lg:mb-15 mb-8 text-center">
         Our Latest Videos
       </h2>
-      <div className="flex overflow-hidden flex-start">
+      <div className="flex overflow-hidden flex-start lg:flex-row flex-col">
         <WebflowReveal className="flex max-w-[500px] w-full flex-col gap-6">
           {videos.map((video, index) => (
             <div
@@ -78,7 +78,7 @@ export default function VideosSection() {
             </div>
           ))}
         </WebflowReveal>
-        <WebflowReveal className="w-full max-w-[871px] ml-[65px] flex items-center justify-center p-6">
+        <WebflowReveal className="w-full max-w-[871px] lg:ml-[65px] flex items-center justify-center lg:p-6 lg:mt-0 mt-10">
           <div className="relative w-full">
             <YouTubePlayerWithOverlay
               youtubeUrl={videos[activeIndex].youtubeUrl}

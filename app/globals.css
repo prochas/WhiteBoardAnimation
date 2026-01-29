@@ -43,6 +43,21 @@ body {
   animation: scroll-right 80s linear infinite;
 }
 
+@keyframes brand-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.brand-marquee {
+  animation: brand-marquee 20s linear infinite;
+}
+
+
 button:disabled {
   cursor: default;
   opacity: 0.5;

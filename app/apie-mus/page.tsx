@@ -37,7 +37,7 @@ const Page = () => {
 
   return (
     <React.Fragment>
-      <WebflowStagger className="flex max-w-[1380px] mx-auto pl-[30px] pr-[30px] pt-[70px] pb-[50px] gap-15">
+      <WebflowStagger className="lg:flex-row flex flex-col max-w-[1380px] mx-auto lg:pl-[30px] lg:pr-[30px] pl-[20px] pr-[20px] lg:pt-[70px] pt-[30px] pb-[50px] lg:gap-15 gap-10">
         <WebflowReveal>
           <Image
             src={SmalsiaiMainLogo}
@@ -45,10 +45,11 @@ const Page = () => {
             width={400}
             height={400}
             style={{ objectFit: "contain" }}
+            className="lg:w-[400px] w-full h-auto mx-auto"
           />
         </WebflowReveal>
         <WebflowReveal className="flex flex-col justify-center">
-          <h1 className="text-4xl font-bold mb-6 text-[#000f29]">Apie Mus</h1>
+          <h1 className="lg:text-4xl text-3xl lg:text-left text-center font-bold mb-6 text-[#000f29]">Apie Mus</h1>
           <p className="mb-4 max-w-3xl text-justify text-lg">
             Sveiki atvykę į Smalsiai.lt Mes esame komanda, kuri siekia suteikti
             jums įdomią ir naudingą informaciją apie įvairias temas. Mūsų
@@ -66,10 +67,10 @@ const Page = () => {
           </p>
         </WebflowReveal>
       </WebflowStagger>
-      <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[80px] grid grid-cols-1 md:grid-cols-4 gap-8 pt-[80px]">
+      <WebflowStagger className="max-w-[1380px] mx-auto lg:pl-[30px] lg:pr-[30px] pl-[20px] pr-[20px] lg:pb-[80px] pb-[50px] grid grid-cols-1 md:grid-cols-4 gap-8 lg:pt-[80px] pt-[20px]">
         {info.map((item, index) => (
           <WebflowReveal key={index}>
-            <div className="flex flex-col items-center justify-center p-6 rounded-lg h-full">
+            <div className="flex flex-col items-center justify-center lg:p-6 p-3 rounded-lg h-full">
               <Image
                 className="mb-7"
                 src={item.img}

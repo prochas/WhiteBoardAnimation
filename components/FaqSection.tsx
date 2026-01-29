@@ -38,10 +38,10 @@ export default function FaqSection() {
   ];
 
   return (
-    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pt-[70px] pb-[150px]">
-      <div className="flex justify-between gap-8">
+    <WebflowStagger className="max-w-[1380px] mx-auto lg:pl-[30px] lg:pr-[30px] pl-[20px] pr-[20px] lg:pt-[70px] pt-[30px] lg:pb-[150px] pb-[100px]">
+      <div className="lg:flex-row flex flex-col justify-between gap-8">
         <WebflowReveal className="flex flex-col gap-6 max-w-[500px]">
-          <h2 className="text-5xl font-[500] leading-[1.2] text-[#000f29]">
+          <h2 className="lg:text-5xl text-3xl lg:text-left text-center font-[500] leading-[1.2] text-[#000f29]">
             Dažniausiai užduodami klausimai
           </h2>
           <p className="text-[#52525a] tracking-[-0.4px] text-[16px] font-normal leading-[180%]">
@@ -50,7 +50,7 @@ export default function FaqSection() {
             informaciją.
           </p>
         </WebflowReveal>
-        <WebflowReveal className="flex flex-col w-[600px] gap-2">
+        <WebflowReveal className="flex flex-col lg:w-[600px] w-full gap-2">
           {faqs.map((faq, index) => (
             <React.Fragment key={index}>
               <div
@@ -63,10 +63,10 @@ export default function FaqSection() {
               >
                 <div
                   key={index}
-                  className="flex bg-[rgb(247, 246, 244)] w-[550px]"
+                  className="flex bg-[rgb(247, 246, 244)] lg:w-[550px] w-full"
                 >
                   <h3
-                    className="text-[#0a0915] cursor-pointer letter-spacing-[-0.4px] text-[18px]"
+                    className="text-[#0a0915] cursor-pointer letter-spacing-[-0.4px] lg:text-[18px] text-[16px] font-medium leading-[180%]"
                     style={{
                       color: isOpen === index ? "white" : "rgb(10, 9, 21)",
                     }}

@@ -10,7 +10,7 @@ const ContactModal = dynamic(() => import("./ContactModal"), {
 
 export default function HeroSection() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
+  
   const container: Variants = {
     hidden: {},
     show: {
@@ -46,22 +46,25 @@ export default function HeroSection() {
     <React.Fragment>
       <div className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pt-[30px]">
         <motion.div
-          className="flex items-center justify-between gap-10"
+          className="flex items-center justify-between gap-10 flex-col-reverse lg:flex-row"
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
         >
           {/* LEFT (staggered) */}
-          <div className="flex max-w-[650px] flex-col gap-6 mb-[5rem]">
+          <div className="flex max-w-[650px] flex-col gap-6 lg:mb-[5rem] mb-[3rem]">
             <div className="flex flex-col gap-5">
               <motion.h1
-                className="text-6xl font-semibold leading-[1.2] text-[#090a15]"
+                className="lg:text-6xl text-4xl font-semibold leading-[1.2] text-[#090a15]"
                 variants={item}
               >
                 Let’s Create Your Next Whiteboard Animation!
               </motion.h1>
-              <motion.p className="text-lg text-[#3c3a4a]" variants={item}>
+              <motion.p
+                className="lg:text-lg text-base text-[#3c3a4a]"
+                variants={item}
+              >
                 Turning ideas into engaging stories with a great whiteboard
                 video.
               </motion.p>
@@ -90,11 +93,11 @@ export default function HeroSection() {
 
           {/* RIGHT (revealed media) */}
           <motion.div
-            className="z-[1] w-full max-w-[668px] h-[560px] relative"
+            className="z-[1] w-full max-w-[668px] lg:h-[560px] relative"
             variants={media}
           >
-            <div className="z-[1] w-full h-[468px] relative overflow-hidden flex items-center justify-center">
-              <div className="rounded-xl px-[20px] py-[20px] bg-gradient-to-b from-[#f99079] via-[#f99079] via-[100%] to-white">
+            <div className="z-[1] w-full lg:h-[468px] relative overflow-hidden flex items-center justify-center">
+              <div className="rounded-xl lg:px-[20px] lg:py-[20px] py-[12px] px-[12px] bg-gradient-to-b from-[#f99079] via-[#f99079] via-[100%] to-white">
                 <div className="w-[100%] h-[95%] rounded-xl overflow-hidden">
                   <video
                     className="w-full h-full object-cover"

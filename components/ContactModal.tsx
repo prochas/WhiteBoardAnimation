@@ -34,7 +34,7 @@ export default function ContactModal({
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -84,13 +84,13 @@ export default function ContactModal({
         overlayClassName="fixed inset-0 bg-black/40 z-[9999] flex items-center justify-center"
         className="bg-[#f7f6f4] w-full sm:w-[90%] max-w-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-lg sm:rounded-lg shadow-lg outline-none relative"
       >
-        <div className="flex align-start gap-10">
+        <div className="lg:flex-row lg:items-start items-center gap-10 flex flex-col">
           <Image src={EmailIcon} alt="Email Icon" className="w-28 h-28" />
           <div className="flex flex-col">
-            <h2 className="text-2xl font-semibold mb-4 text-[#000f29]">
+            <h2 className="text-2xl font-semibold mb-4 text-[#000f29] lg:text-left text-center">
               Contact Us
             </h2>
-            <p className="text-[#52525a] mb-6">
+            <p className="text-[#52525a] mb-6 lg:text-left text-center">
               Have questions or need more information? Fill out the form below
             </p>
             <button
@@ -139,7 +139,7 @@ export default function ContactModal({
               <button
                 type="submit"
                 disabled={loading}
-                className="w-fit border cursor-pointer border-[#ff7d46] bg-[#ff7d46] text-white px-7 py-2.5 rounded-3xl text-lg font-medium hover:bg-white hover:text-[#ff7d46] transition duration-400"
+                className="lg:w-fit w-full border cursor-pointer border-[#ff7d46] bg-[#ff7d46] text-white px-7 py-2.5 rounded-3xl text-lg font-medium hover:bg-white hover:text-[#ff7d46] transition duration-400 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? "Siunčiama..." : "Siųsti žinutę"}
               </button>

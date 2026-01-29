@@ -20,9 +20,9 @@ import FeatureBackground from "../public/images/feature-background.svg";
 
 export default function FeatureSection() {
   return (
-    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px] mt-[50px]">
+    <WebflowStagger className="max-w-[1380px] mx-auto lg:pl-[30px] lg:pr-[30px] pl-[20px] pr-[20px] lg:pb-[100px] pb-[70px] lg:mt-[50px]">
       <div
-        className="flex flex-col gap-16 bg-[#0a0915] rounded-[24px] pt-[70px] pb-[100px] relativez-[1]"
+        className="flex flex-col lg:gap-16 gap-10 bg-[#0a0915] rounded-[24px] pt-[70px] pb-[100px] relative z-[1]"
         style={{
           backgroundImage: `url(${FeatureBackground.src})`,
           backgroundSize: "100% auto",
@@ -35,10 +35,10 @@ export default function FeatureSection() {
             <p className="opacity-70 text-white tracking-[2px] uppercase text-[12px] font-normal">
               Features
             </p>
-            <h2 className="max-w-[800px] text-[40px] font-medium leading-[130%] text-white">
+            <h2 className="max-w-[800px] lg:text-[40px] text-[32px] font-medium leading-[130%] text-white">
               Discover the Power of Our Whiteboard Animation Services
             </h2>
-            <p className="max-w-[700px] text-white tracking-[-0.4px] mt-0 text-[16px] font-normal leading-[180%]">
+            <p className="max-w-[700px] text-white tracking-[-0.4px] mt-0 lg:text-[16px] text-[14px] font-normal leading-[180%]">
               Our whiteboard animation services are designed to bring your ideas
               to life with engaging visuals and compelling storytelling. Explore
               the features that set us apart and make us the ideal partner for
@@ -78,7 +78,7 @@ export default function FeatureSection() {
                   key={`first-${index}`}
                   src={img}
                   alt=""
-                  className="rounded-xl select-none pointer-events-none opacity-80"
+                  className="rounded-xl select-none pointer-events-none opacity-80 lg:w-[300px] lg:h-[160px] w-[200px] h-[120px]"
                   width={300}
                   height={160}
                   draggable={false}
@@ -103,7 +103,7 @@ export default function FeatureSection() {
                   key={`second-${index}`}
                   src={img}
                   alt=""
-                  className="rounded-xl select-none pointer-events-none opacity-80"
+                  className="rounded-xl select-none pointer-events-none opacity-80 lg:w-[300px] lg:h-[160px] w-[200px] h-[120px]"
                   width={300}
                   height={160}
                   draggable={false}

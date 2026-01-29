@@ -6,14 +6,14 @@ import Image from "next/image";
 
 export default function BenefitsSections() {
   return (
-    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] pb-[100px]">
-      <h2 className="text-4xl font-semibold leading-[1.2] text-[#000f29] mb-15 text-center">
+    <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] lg:pb-[100px] pb-[50px]">
+      <h2 className="lg:text-4xl text-3xl font-semibold leading-[1.2] text-[#000f29] lg:mb-15 mb-8 text-center lg:mt-0 mt-10">
         Key Benefits for Your Business
       </h2>
-      <div className="flex flex-col gap-[100px]">
+      <div className="flex flex-col lg:gap-[100px] gap-[70px]">
         {/* Boosted Conversions */}
-        <div className="flex items-center gap-[150px]">
-          <WebflowReveal className="flex items-center justify-center w-full max-w-[541px] min-h-[506px] rounded-[24px] px-[20px] py-[40px] bg-gradient-to-b from-[#f99079] via-[#fcc7be] via-[42.8%] to-white">
+        <div className="flex items-center lg:gap-[150px] gap-[50px] lg:flex-row flex-col">
+          <WebflowReveal className="flex items-center justify-center w-full lg:max-w-[541px] lg:min-h-[506px] rounded-[24px] px-[20px] py-[40px] bg-gradient-to-b from-[#f99079] via-[#fcc7be] via-[42.8%] to-white">
             <Image
               src="/images/benefit-third.png"
               style={{ borderRadius: "8px", marginLeft: "40px", opacity: 0.9 }}
@@ -30,7 +30,7 @@ export default function BenefitsSections() {
                 </p>
               </div>
               <div className="flex flex-col gap-[16px]">
-                <h2 className="max-w-[510px] text-[40px] font-medium leading-[130%] text-[#11122c]">
+                <h2 className="max-w-[510px] lg:text-[40px] text-[32px] font-medium leading-[130%] text-[#11122c]">
                   Boosted Conversions
                 </h2>
                 <p className="text-[#52525a] tracking-[-0.4px] mt-0 text-[16px] font-normal leading-[180%]">
@@ -56,7 +56,7 @@ export default function BenefitsSections() {
           </WebflowReveal>
         </div>
         {/* Educational Focus */}
-        <div className="flex items-center gap-[150px]">
+        <div className="flex items-center lg:gap-[150px] gap-[50px] lg:flex-row flex-col-reverse">
           <WebflowReveal className="flex flex-col items-start w-full max-w-[648px] gap-[48px]">
             <div className="flex flex-col items-start gap-[25px]">
               <div className="flex flex-row justify-start bg-[#f7f6f4] rounded-[24px] py-[6px] px-[14px]">
@@ -65,7 +65,7 @@ export default function BenefitsSections() {
                 </p>
               </div>
               <div className="flex flex-col gap-[16px]">
-                <h2 className="max-w-[510px] text-[40px] font-medium leading-[130%] text-[#11122c]">
+                <h2 className="max-w-[510px] lg:text-[40px] text-[32px] font-medium leading-[130%] text-[#11122c]">
                   Educational Focus
                 </h2>
                 <p className="text-[#52525a] tracking-[-0.4px] mt-0 text-[16px] font-normal leading-[180%]">
@@ -88,7 +88,7 @@ export default function BenefitsSections() {
               </a>
             </div>
           </WebflowReveal>
-          <WebflowReveal className="flex items-center justify-center w-full max-w-[541px] min-h-[506px] rounded-[24px] px-[20px] py-[40px] bg-[linear-gradient(143.89deg,_#fff6,_#fff0_67.37%),linear-gradient(#f976b5,_#fa89bf_0%,_#fff_100%,_#fff)]">
+          <WebflowReveal className="flex items-center justify-center w-full lg:max-w-[541px] lg:min-h-[506px] rounded-[24px] px-[20px] py-[40px] bg-[linear-gradient(143.89deg,_#fff6,_#fff0_67.37%),linear-gradient(#f976b5,_#fa89bf_0%,_#fff_100%,_#fff)]">
             <Image
               src="/images/image-4.png"
               style={{ borderRadius: "8px", opacity: 0.9 }}
@@ -99,8 +99,8 @@ export default function BenefitsSections() {
           </WebflowReveal>
         </div>
         {/* Visual Storytelling */}
-        <div className="flex items-center gap-[150px]">
-          <WebflowReveal className="flex items-center justify-center w-full max-w-[541px] min-h-[506px] rounded-[24px] px-[20px] py-[40px] bg-[linear-gradient(143.89deg,_#fff6,_#fff0_67.37%),linear-gradient(#7976f9,_#fff)]">
+        <div className="flex items-center lg:gap-[150px] gap-[50px] lg:flex-row flex-col">
+          <WebflowReveal className="flex items-center justify-center w-full lg:max-w-[541px] lg:min-h-[506px] rounded-[24px] px-[20px] py-[40px] bg-[linear-gradient(143.89deg,_#fff6,_#fff0_67.37%),linear-gradient(#7976f9,_#fff)]">
             <Image
               src="/images/ideja-three.png"
               style={{ borderRadius: "15px", opacity: 0.9 }}
@@ -117,7 +117,7 @@ export default function BenefitsSections() {
                 </p>
               </div>
               <div className="flex flex-col gap-[16px]">
-                <h2 className="max-w-[510px] text-[40px] font-medium leading-[130%] text-[#11122c]">
+                <h2 className="max-w-[510px] lg:text-[40px] text-[32px] font-medium leading-[130%] text-[#11122c]">
                   Visual Storytelling
                 </h2>
                 <p className="text-[#52525a] tracking-[-0.4px] mt-0 text-[16px] font-normal leading-[180%]">
