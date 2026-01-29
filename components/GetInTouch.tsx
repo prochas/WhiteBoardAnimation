@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 import AddressIcon from "@/public/images/address.svg";
 import EmailIcon from "@/public/images/email.svg";
@@ -9,8 +8,6 @@ import { WebflowStagger } from "@/utils/Stagger";
 import { WebflowReveal } from "@/utils/Reveal";
 
 export default function GetInTouch() {
-  const pathname = usePathname();
-  const isContactsPage = pathname === "/kontaktai";
 
   return (
     <WebflowStagger className="max-w-[1380px] mx-auto pl-[30px] pr-[30px] lg:pb-[100px] pb-[70px]">
